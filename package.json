@@ -1,0 +1,15 @@
+{
+  "name": "sms-send-service",
+  "version": "1.0.0",
+  "description": "simple sms send",
+  "main": "index.js",
+  "repository": "git@github.com:mrgamza/sms-send-service.git",
+  "author": "Donghyuk <mrgamza@gmail.com>",
+  "scripts": {
+    "start": "node app/app.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
