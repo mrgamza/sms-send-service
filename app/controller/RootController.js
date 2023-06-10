@@ -1,3 +1,3 @@
-exports.get = async function(request, response) {
+export async function hi(_, response) {
     response.status(200).end('Hi! sms-send-service')
 }
