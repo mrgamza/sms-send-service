@@ -14,7 +14,7 @@ SENS_MY_NUMBER={sens_my_number}
 ## USE
 ### Install packages
 ```
-$ yarn
+$ yarn install
 ```
 ### Start server
 ```
