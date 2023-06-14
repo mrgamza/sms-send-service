@@ -21,10 +21,11 @@ export async function send(request, response) {
 
     const result = await send_message(message, phoneNumber)
     const status = result.status || 500
-    if (status == 202) {
-        return ResponseHelper.make(response, status, ResultCode.SUCCESS, 'SMS sent successfully')
-    } else {
-        return ResponseHelper.make(response, status, ResultCode.EXTERNAL_ERROR, 'SENS service error')
+    switch (status) {
+        case 202:
+            return ResponseHelper.make(response, status, ResultCode.SUCCESS, 'SMS sent successfully')
+        default:
+            return ResponseHelper.make(response, status, ResultCode.EXTERNAL_ERROR, `SENS service error - ${status}`)
     }
 }
 
